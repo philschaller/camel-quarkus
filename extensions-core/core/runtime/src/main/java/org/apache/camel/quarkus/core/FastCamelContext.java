@@ -593,6 +593,26 @@ public class FastCamelContext extends AbstractCamelContext implements CatalogCam
     }
 
     @Override
+    public FaultToleranceConfigurationDefinition getFaultToleranceConfiguration(String id) {
+        return model.getFaultToleranceConfiguration(id);
+    }
+
+    @Override
+    public void setFaultToleranceConfiguration(FaultToleranceConfigurationDefinition configuration) {
+        model.setFaultToleranceConfiguration(configuration);
+    }
+
+    @Override
+    public void setFaultToleranceConfigurations(List<FaultToleranceConfigurationDefinition> configurations) {
+        model.setFaultToleranceConfigurations(configurations);
+    }
+
+    @Override
+    public void addFaultToleranceConfiguration(String id, FaultToleranceConfigurationDefinition configuration) {
+        model.addFaultToleranceConfiguration(id, configuration);
+    }
+
+    @Override
     public List<ValidatorDefinition> getValidators() {
         return model.getValidators();
     }
